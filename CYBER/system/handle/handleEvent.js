@@ -1,5 +1,5 @@
 module.exports = function ({api ,models, Users, Threads, Currencies }) {
-    const logger = require("../../catalogs/cyberc.js");
+    const logger = require("../../catalogs/Mahabubc.js");
    	const moment = require("moment");
     return function ({ event }) {
         const timeStart = Date.now()
