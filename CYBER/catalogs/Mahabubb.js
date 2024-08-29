@@ -2,14 +2,14 @@ const { readdirSync, readFileSync, writeFileSync } = require("fs-extra");
 const { join, resolve } = require('path')
 const { execSync } = require('child_process');
 const axios = require('axios')
-const config = require("../../Cyber.json");
+const config = require("../../Mahabub.json");
 const chalk = require("chalk");
 const listPackage = JSON.parse(readFileSync('../../package.json')).dependencies;
 const packages = JSON.parse(readFileSync('../../package.json'));
 const fs = require("fs");
 const login = require('../system/login/index.js');
 const moment = require("moment-timezone");
-const logger = require("./cyberc.js");
+const logger = require("./Mahabubc.js");
 const gradient = require("gradient-string");
 const process = require("process");
 const listbuiltinModules = require("module").builtinModules;
@@ -65,8 +65,8 @@ global.data = new Object({
   allCurrenciesID: new Array(),
   allThreadID: new Array(),
 });
-global.utils = require("./cyberd.js");
-global.loading = require("./cyberc.js");
+global.utils = require("./Mahabubd.js");
+global.loading = require("./Mahabubc.js");
 global.nodemodule = new Object();
 global.config = new Object();
 global.ryuko = new Object();
@@ -104,7 +104,7 @@ try {
 }
 var ryukoValue;
 try {
-  global.client.ryukoPath = join(global.client.mainPath, "../configs/Cyber.json");
+  global.client.ryukoPath = join(global.client.mainPath, "../configs/Mahabub.json");
   ryukoValue = require(global.client.ryukoPath);
 } catch (e) {
   return;
@@ -116,7 +116,7 @@ try {
 }
 var configValue;
 try {
-  global.client.configPath = join(global.client.mainPath, "../../Cyber.json");
+  global.client.configPath = join(global.client.mainPath, "../../Mahabub.json");
   configValue = require(global.client.configPath);
   logger.loader(`deploying ${chalk.blueBright('CYBER')} file`);
 } catch (e) {
@@ -210,14 +210,14 @@ global.getText = function(...args) {
 
 try {
   if (!global.config.BOTNAME) {
-    logger.error(`please enter your bot name in ${chalk.blueBright('Cyber.json')} file`);
+    logger.error(`please enter your bot name in ${chalk.blueBright('Mahabub.json')} file`);
     process.exit(0);
   }
   if (!global.config.PREFIX) {
-    logger.error(`please enter your bot prefix in ${chalk.blueBright('Cyber.json')} file`)
+    logger.error(`please enter your bot prefix in ${chalk.blueBright('Mahabub.json')} file`)
   }
   if (global.config.author != "CYBER") {
-    logger.error(`detected : author was changed at ${chalk.blueBright('Cyber.json')}`);
+    logger.error(`detected : author was changed at ${chalk.blueBright('Mahabub.json')}`);
     process.exit(0);
   }
   if (packages.author != "CYBER") {
@@ -233,11 +233,11 @@ try {
 }
 
 try {
-  var appStateFile = resolve(join(global.client.mainPath, "../../Cyberstate.json"));
+  var appStateFile = resolve(join(global.client.mainPath, "../../Mahabubstate.json"));
   var appState = ((process.env.REPL_OWNER || process.env.PROCESSOR_IDENTIFIER) && (fs.readFileSync(appStateFile, 'utf8'))[0] != "[" && ryuko.encryptSt) ? JSON.parse(global.utils.decryptState(fs.readFileSync(appStateFile, 'utf8'), (process.env.REPL_OWNER || process.env.PROCESSOR_IDENTIFIER))) : require(appStateFile);
-  logger.loader(`deployed ${chalk.blueBright('Cyberstate')} file`)
+  logger.loader(`deployed ${chalk.blueBright('Mahabubstate')} file`)
 } catch (e) {
-  return logger.error(`can't read ${chalk.blueBright('Cyberstate')} file`)
+  return logger.error(`can't read ${chalk.blueBright('Mahabubstate')} file`)
 }
 
 function onBot({ models: botModel }) {
@@ -278,7 +278,7 @@ function onBot({ models: botModel }) {
                 continue;
               }
             }
-            const configures = require(`../../Cyber.json`);
+            const configures = require(`../../Mahabub.json`);
             if (configures.premium) {
               if (!config?.hasOwnProperty('premium')) {
                 console.log(`• HEY CYBER • `, chalk.hex("#ff0000")(command) + ` does not have the "premium" property.`);
@@ -321,7 +321,7 @@ function onBot({ models: botModel }) {
                 global.configModule[moduleName][envConfigKey] = global.ryuko[moduleName][envConfigKey] ?? envConfig[envConfigKey];
                 global.ryuko[moduleName][envConfigKey] = global.ryuko[moduleName][envConfigKey] ?? envConfig[envConfigKey];
               }
-              var ryukoPath = require('../configs/Cyber.json');
+              var ryukoPath = require('../configs/Mahabub.json');
               ryukoPath[moduleName] = envConfig;
               writeFileSync(global.client.ryukoPath, JSON.stringify(ryukoPath, null, 4), 'utf-8');
             }
