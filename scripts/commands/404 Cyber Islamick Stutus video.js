@@ -1,6 +1,6 @@
 /** THIS FULL BOT COMMAND FILE AND ALL API CREATE BY ISLAMICK CYBET CHAT DONT CHINGE THE MY ANY CODE 🤙🖤📿  **/
 module.exports.config = {
-  name: "islamickstutus video",
+  name: "islamickstatus",
   version: "1.0.0",
   permssion: 0,
   credits: "Islamick Cyber Chat",
