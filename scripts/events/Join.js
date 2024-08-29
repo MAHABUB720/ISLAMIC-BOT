@@ -40,7 +40,7 @@ ________________________\n\n𝐓𝐨 𝐯𝐢𝐞𝐰 𝐚𝐧𝐲 𝐜𝐨𝐦�
 ${global.config.PREFIX}Help\n${global.config.PREFIX} Manu
 
 𝐁𝐎𝐓 𝐍𝐀𝐌𝐄: ${(global.config.BOTNAME)
-\n\n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆`, attachment: fs.createReadStream(__dirname + "/cache/joinm/")} ,threadID));
+\n\n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆`, attachment: fs.createReadStream(__dirname + "/cache/joinGif/Blue Gradient Modern Youtube Intro_20240828_201240_0001.gif")} ,threadID));
 	}
 	else {
 		try {
