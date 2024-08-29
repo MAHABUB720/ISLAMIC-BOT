@@ -1,5 +1,5 @@
  module.exports = async ({ api, event }) => {
-  const logger = require('./CYBER/catalogs/cyberc.js')
+  const logger = require('./CYBER/catalogs/Mahabubc.js')
   
   const configCustom = {
     autosetbio: {
@@ -135,7 +135,7 @@ if (á = nam.find(i => i.timer == new Date(Date.now()+25200000).toLocaleString()
   function autoRestart(config) {
     if(config.status) {
       setInterval(async () => {
-        logger(`auto restart is processing, please wait.`, "CYBER")
+        logger(`auto restart is processing, please wait.`, "MAHABUB")
         process.exit(1)
       }, config.time * 60 * 1000)
     }
