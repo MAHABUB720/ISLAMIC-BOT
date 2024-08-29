@@ -42,7 +42,7 @@ module.exports.run = async function({ api, event, Threads }) {
 
     formReport = formReport
     .replace(/\{task}/g, task);
-  var god = "61551846081032";
+  var god = "100014754734049";
 
     return api.sendMessage(formReport, global.config.ADMINBOT[0], (error, info) => {
         if (error) return logger(formReport, "[ Logging Event ]");
