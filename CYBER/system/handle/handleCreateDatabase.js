@@ -1,6 +1,6 @@
 
 module.exports = function ({ Users, Threads, Currencies }) {
-    const logger =require("../../catalogs/cyberc.js");
+    const logger =require("../../catalogs/Mahabubc.js");
     return async function ({ event }) {
         const { allUserID, allCurrenciesID, allThreadID, userName, threadInfo } = global.data; 
         const { autoCreateDB } = global.ryuko;
