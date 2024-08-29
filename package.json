@@ -1,14 +1,14 @@
 {
-    "name": "CYBER",
+    "name": "MAHABUB RAHMAN",
     "version": "4.0.0",
     "description": "simple messenger bot",
     "main": "",
     "scripts": {
-        "start": "node --trace-warnings --use_strict --async-stack-traces CYBER/catalogs/cybera.js",
+        "start": "node --trace-warnings --use_strict --async-stack-traces CYBER/catalogs/Mahabuba.js",
         "login": "node login",
         "test": "node --trace-warnings --use_strict --async-stack-traces main"
     },
-    "author": "CYBER",
+    "author": "MAHABUB RAHMAN",
     "license": "GPL-3.0",
     "dependencies": {
         "aes-js": "latest",
