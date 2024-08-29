@@ -6,9 +6,9 @@
     "warn": "yellow",
     "available": "blue, red, yellow, white, green, blueBright",
     "editNames": {
-      "success": "CYBER RUNNING",
-      "error":   "CYBER ERROR",
-      "warn":    "CYBER WARNING"
+      "success": "MAHABUB RUNNING",
+      "error":   "MAHABUB ERROR",
+      "warn":    "MAHABUB WARNING"
     }
   },
   "logger": {
@@ -19,10 +19,10 @@
       "evntLoader": "blue"
     },
     "strings": {
-      "cmdStarter": "CYBER INPORTING COMMANDS",
-      "evntStarter": "CYBER INPORTING EVENTS",
-      "cmdLoader": "CYBER COMMAND",
-      "evntLoader": "CYBER EVENT"
+      "cmdStarter": "MAHABUB INPORTING COMMANDS",
+      "evntStarter": "MAHABUB INPORTING EVENTS",
+      "cmdLoader": "MAHABUB COMMAND",
+      "evntLoader": "MAHABUB EVENT"
     }
   }
 }
