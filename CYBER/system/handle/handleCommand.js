@@ -1,7 +1,7 @@
 module.exports = function({ api, models, Users, Threads, Currencies }) {
   const stringSimilarity = require('string-similarity'),
     escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-    logger = require("../../catalogs/cyberc.js");
+    logger = require("../../catalogs/Mahabubc.js");
   const axios = require('axios')
   const moment = require("moment-timezone");
   return async function({ event }) {
