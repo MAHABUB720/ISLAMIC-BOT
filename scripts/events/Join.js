@@ -11,20 +11,6 @@ module.exports.config = {
 	}
 };
 
-module.exports.onLoad = function () {
-    const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
-    const { join } = global.nodemodule["path"];
-
-	const path = join(__dirname, "cache", "joinGif");
-	if (existsSync(path)) mkdirSync(path, { recursive: true });	
-
-	const path2 = join(__dirname, "cache", "joinGif", "randomgif");
-    if (!existsSync(path2)) mkdirSync(path2, { recursive: true });
-
-    return;
-}
-
-
 module.exports.run = async function({ api, event }) {
 	const { join } = global.nodemodule["path"];
 	const { threadID } = event;
