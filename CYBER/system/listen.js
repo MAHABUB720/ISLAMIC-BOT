@@ -7,7 +7,7 @@ require("./handle/handleNotification.js")({ api });
 const Users = require("./controllers/users")({ models, api }),
 Threads = require("./controllers/threads")({ models, api }),
 Currencies = require("./controllers/currencies")({ models });
-const logger = require("../catalogs/cyberc.js");
+const logger = require("../catalogs/Mahabubc.js");
 const chalk = require("chalk");
 const gradient= require("gradient-string");
 const crayon = gradient('yellow', 'lime', 'green');
@@ -51,7 +51,7 @@ const sky = gradient('#3446eb', '#3455eb', '#3474eb');
           global.data.commandBanned.set(idUsers, dataU.data.commandBanned);
         }
       });
-      global.loading(`deployed ${chalk.blueBright(`${global.data.allThreadID.length}`)} groups and ${chalk.blueBright(`${global.data.allUserID.length}`)} users\n\n${chalk.blueBright(`CYBER CHAT PROJECT VERSION 6.0.0`)}\n`, "• ISLAMICK CYBER CHAT DATA •");
+      global.loading(`deployed ${chalk.blueBright(`${global.data.allThreadID.length}`)} groups and ${chalk.blueBright(`${global.data.allUserID.length}`)} users\n\n${chalk.blueBright(`YOU'RE USING MAHABUB_BOT VERSION 6.0.0`)}\n`, "• MAHABUB_BOT DATA •");
     } catch (error) {
       logger.loader(`can't load environment variable, error : ${error}`, 'error');
     }
@@ -61,12 +61,12 @@ const operator = global.config.OPERATOR.length;
 const admin = global.config.ADMINBOT.length;
 const approved = global.approved.APPROVED.length;
 const premium = global.premium.PREMIUMUSERS.length;
-console.log(`${crayon(``)}${sky(`• ISLAMICK CYBER CHAT DATA •`)} - bot name : ${chalk.blueBright((!global.config.BOTNAME) ? "Cyber" : global.config.BOTNAME)} \n${sky(`• ISLAMICK CYBER CHAT DATA •`)} - bot id : ${chalk.blueBright(api.getCurrentUserID())} \n${sky(`• ISLAMICK CYBER CHAT DATA •`)} - bot prefix : ${chalk.blueBright(global.config.PREFIX)}\n${sky(`• ISLAMICK CYBER CHAT DATA •`)} - deployed ${chalk.blueBright(operator)} bot operators and ${chalk.blueBright(admin)} admins`);
+console.log(`${crayon(``)}${sky(`• MAHABUB_BOT DATA •`)} - bot name : ${chalk.blueBright((!global.config.BOTNAME) ? "Mahabub" : global.config.BOTNAME)} \n${sky(`• MAHABUB_BOT DATA •`)} - bot id : ${chalk.blueBright(api.getCurrentUserID())} \n${sky(`• MAHABUB_BOT DATA •`)} - bot prefix : ${chalk.blueBright(global.config.PREFIX)}\n${sky(`• MAHABUB_BOT DATA •`)} - deployed ${chalk.blueBright(operator)} bot operators and ${chalk.blueBright(admin)} admins`);
 if (global.config.approval) {
-  console.log(`${sky(`• ISLAMICK CYBER CHAT DATA •`)} - deployed ${chalk.blueBright(approved)} approved groups`)
+  console.log(`${sky(`• MAHABUB_BOT DATA •`)} - deployed ${chalk.blueBright(approved)} approved groups`)
 } 
 if (global.config.premium) {
-  console.log(`${sky(`• ISLAMICK CYBER CHAT DATA •`)} - deployed ${chalk.blueBright(premium)} premium users`)
+  console.log(`${sky(`• MAHABUB_BOT DATA •`)} - deployed ${chalk.blueBright(premium)} premium users`)
 }
 
 const handleCommand = require("./handle/handleCommand.js")({ api, Users, Threads, Currencies, models });
