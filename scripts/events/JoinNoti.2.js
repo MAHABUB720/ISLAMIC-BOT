@@ -157,8 +157,7 @@ ____________________________________
       }
       memLength.sort((a, b) => a - b);
       (typeof threadData.customJoin == "undefined") ? msg = `আসসালামু আলাইকুম🌺 🥀༊🤗😻🤗 {name}  😍.\n\n🌸༊🥀۞Wellcome-!!-🌻🥀 To {threadName}\n{type} You are the {soThanhVien} member of this group🌻.\n\n𝄞❤️⋆⃝⑅⑅⃝•BOT OWNER♥🖤 Mahabub Rahaman ❤️😇Never Try To Spam Here🚫\n\n 『Mahabur Rahaman♥』\n\n🥰 Follow Our Group Rules✅\n\n🤖 Hi I'm  messenger bot use '/help' to see command 🤖."\n─────────────────\n[ {time} - {thu} ]` : msg = threadData.customJoin;
-      var nameAuthor = await Users.getNameUser(event.author)
-      msg = msg
+       msg = msg
         .replace(/\{iduser}/g, iduser.join(', '))
         .replace(/\{name}/g, nameArray.join(', '))
         .replace(/\{type}/g, (memLength.length > 1) ? 'You' : 'You')
