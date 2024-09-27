@@ -17,7 +17,7 @@
   "allowInbox": false,
   "adminOnly": false,
   "autoCreateDB": true,
-  "encryptSt": false,
+  "encryptSt": true,
   "version": "4.0.0",
   "logs": {
     "enable": true
