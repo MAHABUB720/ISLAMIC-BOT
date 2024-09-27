@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: `global.config.BOT`,
+  name: `${global.config.PREFIX}`,
   version: "1.0.0", 
   permission: 0,
   credits: "Rahad",
