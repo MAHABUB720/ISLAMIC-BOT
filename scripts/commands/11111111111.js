@@ -32,18 +32,18 @@ module.exports.handleEvent = async function ({ api, event }) {
   let threadSetting = global.data.threadData.get(threadID) || {};
   let prefix = threadSetting.PREFIX || PREFIX;
   const timeStart = Date.now();
-  const tdung = require("./../../rahad/prefix.json");
+  const tdung = require("./../../Prefix/Prefix.json");
   var video = tdung[Math.floor(Math.random() * tdung.length)].trim();
   function vtuanhihi(videoUrl, vtuandz, callback) {
     request(videoUrl)
       .pipe(fs.createWriteStream(__dirname + `/` + vtuandz))
       .on("close", callback);
   }
-  if (body.toLowerCase() == "Prefix" || body.toLowerCase() == "prefix") {
+  if (body.toLowerCase() == `${global.config.PREFIX}` || body.toLowerCase() == `${global.config.PREFIX}`) {
     let callback = function () {
       return api.sendMessage(
         {
-          body: `====『 𝙿𝚁𝙴𝙵𝙸𝚇 』====\n▱▱▱▱▱▱▱▱▱▱▱▱▱\n✿𝙶𝚛𝚘𝚞𝚙 𝙿𝚛𝚎𝚏𝚒𝚡: ${prefix}\n۞𝚂𝚢𝚜𝚝𝚎𝚖 𝙿𝚛𝚎𝚏𝚒𝚡 : ${global.config.PREFIX}\n✪𝙱𝚘𝚝 𝙽𝚊𝚖𝚎: ${global.config.BOTNAME}\n❁𝙱𝚘𝚝 𝙲𝚞𝚛𝚛𝚎𝚗𝚝𝚕𝚢 𝙷𝚊𝚜:${
+          body: `====『 𝙿𝚁𝙴𝙵𝙸𝚇 𝙴𝚅𝙴𝙽𝚃 』====\n▱▱▱▱▱▱▱▱▱▱▱▱▱\n✿𝙶𝚛𝚘𝚞𝚙 𝙿𝚛𝚎𝚏𝚒𝚡: ${prefix}\n۞𝚂𝚢𝚜𝚝𝚎𝚖 𝙿𝚛𝚎𝚏𝚒𝚡 : ${global.config.PREFIX}\n✪𝙱𝚘𝚝 𝙽𝚊𝚖𝚎: ${global.config.BOTNAME}\n❁𝙱𝚘𝚝 𝙲𝚞𝚛𝚛𝚎𝚗𝚝𝚕𝚢 𝙷𝚊𝚜:${
             client.commands.size
           } 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜\n✴𝙿𝚒𝚗𝚐: ${Date.now() - timeStart}ms\n▱▱▱▱▱▱▱▱▱▱▱▱▱\n『  ${thu} || ${times} 』`,
           attachment: [fs.createReadStream(__dirname + `/video.mp4`)],
